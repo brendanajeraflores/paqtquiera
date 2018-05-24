@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Iniciar sesión</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -10,18 +10,18 @@
 </head>
 <body>
 <?php 
-  include_once('header.php');
+  include_once('plantillas/header.php');
 ?>
 <div class="container">
   <h2>Iniciar sesión</h2>
-  <form action="/inicioSesion.php">
+  <form method="POST" action="../../php/usuarios/autenticacion.php">
     <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="correo">
+      <label for="usuario">Usuario:</label>
+      <input type="text" class="form-control" id="usuario" placeholder="usuario" name="usuario">
     </div>
     <div class="form-group">
       <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="constrasenia">
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="contrasenia">
     </div>
     <div class="form-group form-check">
       <label class="form-check-label">
@@ -33,7 +33,7 @@
 </div>
 
 <?php 
-  include_once('footer.php');
+  include_once('plantillas/footer.php');
 ?>
 </body>
 </html>

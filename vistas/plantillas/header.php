@@ -14,11 +14,11 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-        <img src="img/logoPaqtquiera.jpeg" alt="paqtquiera" width="100" height="100">
+        <img src="../img/logoPaqtquiera.jpeg" alt="paqtquiera" width="100" height="100">
         <!--<a class="navbar-brand" href="#">WebSiteName</a>-->
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li class="active"><a href="../index.php">Home</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Menú <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="#">Globos</a></li>
@@ -27,11 +27,21 @@
         </ul>
       </li>
     </ul>
+    <?php session_start();
+          if(!empty($_SESSION['perfil'])){
+    ?>        
     <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="agregar.php"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['nombre']?></a></li>
+        <li><a href="login.php"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></a></li>
         
+    </ul>
+         <?php } else {?>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="agregar.php"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
+        <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></a></li>
+        <?php }?>
     </ul>
   </div>
 </nav>

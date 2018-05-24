@@ -10,7 +10,7 @@
 </head>
 <body>
 <?php 
-  include_once('header.php');
+  include_once('vistas/plantillas/header.php');
 ?>
 <div class="container">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -53,7 +53,7 @@
   </div>
 </div>
 <?php 
-  include_once('footer.php');
+  include_once('vistas/plantillas/footer.php');
 ?>
 </body>
 </html>

@@ -20,8 +20,8 @@
                                         <li><a href="">Trabaja con nosotros</a></li>
                                         <li><a href="">Comentarios y sugerencias</a></li>                
                                     </ul>
-                                    <a href="https://www.facebook.com/RegalosPaQTQuiera/"><img class="iconos" src="img/fb.png"></a>                
-                                    <a href=""><img class="iconos" src="img/ig.png"></a>
+                                    <a href="https://www.facebook.com/RegalosPaQTQuiera/"><img class="iconos" src="../img/fb.png"></a>                
+                                    <a href=""><img class="iconos" src="../img/ig.png"></a>
                                 </div>
                                 <div class="col-md-3 col-sm-6 col-xs-12">
                                     <img src="img/elefante.jpg" alt="" width="100" height="100">

@@ -10,11 +10,11 @@
 </head>
 <body>
 <?php 
-  include_once('plantillas/header.php');
+  include_once('/paqtquiera/vistas/plantillas/header.php');
 ?>
 <div class="container">
   <h2>Iniciar sesión</h2>
-  <form method="POST" action="../../php/usuarios/autenticacion.php">
+  <form method="POST" action="/paqtquiera/php/usuarios/autenticacion.php">
     <div class="form-group">
       <label for="usuario">Usuario:</label>
       <input type="text" class="form-control" id="usuario" placeholder="usuario" name="usuario">
@@ -33,7 +33,7 @@
 </div>
 
 <?php 
-  include_once('plantillas/footer.php');
+  include_once('/paqtquiera/vistas/plantillas/footer.php');
 ?>
 </body>
 </html>

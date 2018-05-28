@@ -1,7 +1,7 @@
 <?php  
   include "$_SERVER[DOCUMENT_ROOT]/paqtquiera/php/conexion.php";
 
-  $sql = "SELECT iddelegacion, nombrecolonia FROM colonia";
+  $sql = "SELECT idcolonia,iddelegacion, nombrecolonia FROM colonia";
 
   $resultado = [];
   $resultado = pg_fetch_all(queryPSQL($sql));
@@ -26,17 +26,17 @@
 ?>
 <div class="container">
   <h2>Registrar usuario</h2>
-  <form action="../php/agregarUsuario.php">
+  <form method="POST" action="../../php/usuarios/agregarUsuario.php">
     <div class="form-group">
       <label for="perfil">Tipo de cuenta</label><br>        
         <label class="radio-inline">
-            <input type="radio" name="administrador">Administrador
+            <input type="radio" name="radio" value="1">Administrador
         </label>
         <label class="radio-inline">
-            <input type="radio" name="empleado">Empleado
+            <input type="radio" name="radio" value="2">Empleado
         </label>
         <label class="radio-inline">
-            <input type="radio" name="cliente">Cliente
+            <input type="radio" name="radio" value="3">Cliente
         </label>
     </div>
     <div class="form-group">
@@ -54,15 +54,15 @@
     <div id="direccion"class = "row">
         <div class = 'col-sm-6'>
             <label for="calle">Calle</label>
-            <input type="text" class="form-control" id="calle">
+            <input type="text" class="form-control" name="calle" >
         </div>
         <div class = "col-sm-3">
             <label for="numExt">Número exterior</label>
-            <input type="text" class="form-control" id="numExt">
+            <input type="text" class="form-control" name="numExt">
         </div>
         <div class = "col-sm-3">
             <label for="numInt">Número interior:</label>
-            <input type="text" class="form-control" id="numInt">
+            <input type="text" class="form-control" name="numInt">
         </div>
     </div>
     <div id="direccion2"class = "row">
@@ -78,24 +78,24 @@
         </div>
         <div class = 'col-sm-3'>
             <label for="delegacion1">Delegacion</label>
-            <select class="form-control">
-                <option id="delegacion"></option>
+            <select class="form-control" name="delegacion">
+                <option id="delegacion" ></option>
             </select>
         </div>
         
         <div class = "col-sm-3">
             <label for="cp">Codigo postal</label>
-            <input type="text" class="form-control" id="cp">
+            <input type="text" class="form-control" name="cp">
         </div>
     </div>
     
     <div class="form-group">
       <label for="telefono">Telefono</label>
-      <input type="tel" class="form-control" id="telefono" placeholder="" name="usuario">
+      <input type="tel" class="form-control" id="telefono" placeholder="" name="telefono">
     </div>
     <div class="form-group">
       <label for="correo">Correo</label>
-      <input type="email" class="form-control" id="correo" placeholder="" name="usuario">
+      <input type="email" class="form-control" id="correo" placeholder="" name="correo">
     </div>
     <div class="form-group">
       <label for="usuario">Usuario</label>
@@ -103,7 +103,7 @@
     </div>
     <div class="form-group">
       <label for="pwd">Password</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="constrasenia">
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="contrasenia">
     </div>
     <button type="submit" class="btn btn-primary">Registrar</button>
   </form>

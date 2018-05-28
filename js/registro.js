@@ -16,6 +16,8 @@ $(document).ready(function(){
            //data: $("#optcolonia").serialize(), 
            success: function(data)             
            {
+           	console.log(data);
+
              $('#delegacion').html(data);               
            }
        });

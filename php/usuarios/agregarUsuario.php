@@ -37,34 +37,23 @@
         $usuario = filter_var($_POST['usuario'], FILTER_SANITIZE_STRING);
     }
     if(isset($_POST['contrasenia'])){
-        $contrasenia = $_POST['contrasenia'];
+        $contrasenia = md5($_POST['contrasenia']);
     }
 
 
-    /*echo $colonia;
-    echo $delegacion;*/
+    $sql = "INSERT INTO direccion VALUES(4,'".$calle."','".$numext."','".$numint."',2)";
+
+    pg_fetch_all(queryPSQL($sql));
 
 
-    $query = "INSERT INTO usuario VALUES(4,'".$nombre."','".$primerApellido."','".$segundoApellido."','".$usuario."','".$contrasenia."','".$correo."','".$telefono."',2,".$radio.");";
+    $query = "INSERT INTO usuario VALUES(6,'".$nombre."','".$primerApellido."','".$segundoApellido."','".$usuario."','".$contrasenia."','".$correo."','".$telefono."',4,".$radio.");";
 
-    $resultado = [];
-    $resultado = pg_fetch_all(queryPSQL($query));
+    
+    pg_fetch_all(queryPSQL($query));
 
-    var_dump($resultado);
 
-    /*if (!empty($resultado)) {
-        $resultado = array_pop($resultado);
-    }*/
-    //Mostrar arreglo del usuario, es como un echo
-    //var_dump($usuario);
 
-    /*if(strcmp($resultado['contrasenia'],$contrasenia)===0){
-        session_start();
-        echo "Sesión iniciada";
-        $_SESSION['nombre'] = $resultado['nombre'];
-        $_SESSION['perfil'] = $resultado['idperfil'];
-        header("Location: ../../index.php");
-    }*/
+    
 
 
 

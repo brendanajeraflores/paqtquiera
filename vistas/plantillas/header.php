@@ -37,7 +37,7 @@
               if($_SESSION['perfil'] == 1){ ?>
               <li><button id="btnusuarios" type="button" class="btn btn-link">Administrar usuarios</button></li>                
             <?php } ?>
-        <li><a href="agregar.php"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['nombre']?></a></li>
+        <li><a href="../usuarios/agregar.php"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['nombre']?></a></li>
         <li><a href="php/usuarios/logout.php"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></a></li>
         

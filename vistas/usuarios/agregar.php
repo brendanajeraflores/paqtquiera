@@ -1,3 +1,14 @@
+<?php  
+  include "$_SERVER[DOCUMENT_ROOT]/paqtquiera/php/conexion.php";
+
+  $sql = "SELECT iddelegacion, nombrecolonia FROM colonia";
+
+  $resultado = [];
+  $resultado = pg_fetch_all(queryPSQL($sql));
+  var_dump($resultado);
+  $max = count($resultado);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +18,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="../../js/registro.js"></script>
 </head>
 <body>
 <?php 
@@ -54,18 +66,23 @@
         </div>
     </div>
     <div id="direccion2"class = "row">
+        
         <div class = 'col-sm-6'>
-            <label for="delegacion">Delegacion</label>
-            <select class="form-control">
-                <option>Default select</option>
+            <label for="colonia">Colonia</label>
+            <select id="selectcolonia" class="form-control" name="colonias">
+                <?php 
+                for ($i=0; $i < $max; $i++) { ?>
+                <option id="optcolonia<?php //echo $resultado[$i]['iddelegacion']?>" value="<?php echo $resultado[$i]['iddelegacion'] ?>"><?php echo $resultado[$i]['nombrecolonia']; ?></option>
+                <?php } ?>
             </select>
         </div>
         <div class = 'col-sm-3'>
-            <label for="colonia">Colonia</label>
+            <label for="delegacion1">Delegacion</label>
             <select class="form-control">
-                <option>Default select</option>
+                <option id="delegacion"></option>
             </select>
         </div>
+        
         <div class = "col-sm-3">
             <label for="cp">Codigo postal</label>
             <input type="text" class="form-control" id="cp">

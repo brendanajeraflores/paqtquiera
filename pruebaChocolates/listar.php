@@ -15,12 +15,11 @@ $sql = "SELECT
     ON(A.idOcasion = O.idOcasion)
     INNER JOIN Tipo T
     ON(A.idTipo = T.idTipo)
-    WHERE A.idTipo = 1
+    WHERE A.idTipo = 3
 ;";
 
-$globos = queryPSQL($sql);
+$chocolates = queryPSQL($sql);
 
-echo $globos;
 ?>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="peticiones.js"></script>
@@ -43,17 +42,16 @@ echo $globos;
                 <?php
 
                
-                while ($globo = pg_fetch_assoc($globos)) :
-                    var_dump($globo);
+                while ($chocolate = pg_fetch_assoc($chocolates)) :
                     ?>
                     <tr>             
-                        <td><?php echo $globo['nombrearticulo']; ?></td>
-                        <td><?php echo $globo['existencia']; ?></td>
-                        <td><?php echo $globo['descripcion']; ?></td>
-                        <td><?php echo $globo['descuento']; ?></td>
-                        <td><?php echo $globo['nombretipo']; ?></td>
-                        <td><?php echo $globo['nombreocasion']; ?></td>
-                        <td><?php echo $globo['foto']; ?></td>
+                        <td><?php echo $chocolate['nombrearticulo']; ?></td>
+                        <td><?php echo $chocolate['existencia']; ?></td>
+                        <td><?php echo $chocolate['descripcion']; ?></td>
+                        <td><?php echo $chocolate['descuento']; ?></td>
+                        <td><?php echo $chocolate['nombretipo']; ?></td>
+                        <td><?php echo $chocolate['nombreocasion']; ?></td>
+                        <td><?php echo $chocolate['foto']; ?></td>
                     </tr>
                     <?php
                 endwhile;

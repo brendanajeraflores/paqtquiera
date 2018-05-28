@@ -18,16 +18,16 @@
     <div class="form-group">
       <label for="tipo">Tipo de articulo</label><br>        
         <label class="radio-inline">
-            <input type="radio" name="administrador">Globo
+            <input type="radio" name="globo">Globo
         </label>
         <label class="radio-inline">
-            <input type="radio" name="empleado">Flor
+            <input type="radio" name="flor">Flor
         </label>
         <label class="radio-inline">
-            <input type="radio" name="cliente">Chocolate
+            <input type="radio" name="chocolate">Chocolate
         </label>
         <label class="radio-inline">
-            <input type="radio" name="cliente">Peluche
+            <input type="radio" name="peluche">Peluche
         </label>
     </div>
     <div class="form-group">
@@ -37,16 +37,16 @@
     <div class="form-group">
       <label for="tipo">Ocasion</label><br>        
         <label class="radio-inline">
-            <input type="radio" name="administrador">Cumpleaños
+            <input type="radio" name="cumple">Cumpleaños
         </label>
         <label class="radio-inline">
-            <input type="radio" name="empleado">Día de las madres
+            <input type="radio" name="madre">Día de las madres
         </label>
         <label class="radio-inline">
-            <input type="radio" name="administrador">Boda
+            <input type="radio" name="boda">Boda
         </label>
         <label class="radio-inline">
-            <input type="radio" name="administrador">Aniversario
+            <input type="radio" name="aniversario">Aniversario
         </label>
     </div>
     <div id="direccion"class = "form-group row">

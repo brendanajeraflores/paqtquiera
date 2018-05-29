@@ -23,9 +23,11 @@
       <li class="active"><a href="../index.php">Home</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Menú <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Globos</a></li>
-          <li><a href="#">Peluches</a></li>
-          <li><a href="#">Chocolates</a></li>
+          <li><a href="/paqtquiera/pruebaGlobos/listar.php">Globos</a></li>
+          <li><a href="/paqtquiera/pruebaPeluches/listar.php">Peluches</a></li>
+          <li><a href="/paqtquiera/pruebaChocolates/listar.php">Chocolates</a></li>
+          <li><a href="/paqtquiera/pruebaFlores/listar.php">Flores</a></li>
+
         </ul>
       </li>
     </ul>

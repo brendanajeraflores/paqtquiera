@@ -25,19 +25,19 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="img/articulos/carrusel/chocolates.jpeg" alt="Chocolates" style="width:80%;">
+        <a href="pruebaChocolates/listar.php"><img src="img/articulos/carrusel/chocolates.jpeg" alt="Chocolates" style="width:80%;"></a>
       </div>
 
       <div class="item">
-        <img src="img/articulos/carrusel/flores.jpeg" alt="Flores" style="width:80%;">
+        <a href="pruebaFlores/listar.php"><img src="img/articulos/carrusel/flores.jpeg" alt="Flores" style="width:80%;"></a>
       </div>
     
       <div class="item">
-        <img src="img/articulos/carrusel/peluches.jpeg" alt="Peluches" style="width:80%;">
+        <a href="pruebaPeluches/listar.php"><img src="img/articulos/carrusel/peluches.jpeg" alt="Peluches" style="width:80%;"></a>
       </div>
 
       <div class="item">
-        <img src="img/articulos/carrusel/globos.jpeg" alt="Globos" style="width:80%;">
+        <a href="pruebaGlobos/listar.php"><img src="img/articulos/carrusel/globos.jpeg" alt="Globos" style="width:80%;"></a>
       </div>
     </div>
 

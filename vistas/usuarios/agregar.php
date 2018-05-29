@@ -27,6 +27,10 @@
 <div class="container">
   <h2>Registrar usuario</h2>
   <form method="POST" action="../../php/usuarios/agregarUsuario.php">
+    <?php session_start();
+      if(!empty($_SESSION['perfil'])){
+          if($_SESSION['perfil'] == 1){
+    ?>  
     <div class="form-group">
       <label for="perfil">Tipo de cuenta</label><br>        
         <label class="radio-inline">
@@ -39,6 +43,7 @@
             <input type="radio" name="radio" value="3">Cliente
         </label>
     </div>
+    <?php }} ?>
     <div class="form-group">
       <label for="nombre">Nombre</label>
       <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre">

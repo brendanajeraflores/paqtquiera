@@ -14,57 +14,64 @@
 ?>
 <div class="container">
   <h2>Registrar articulo</h2>
-  <form action="../php/agregarArticulo.php">
+  <form method="POST" action="../../php/articulos/agregarArticulo.php">
     <div class="form-group">
       <label for="tipo">Tipo de articulo</label><br>        
         <label class="radio-inline">
-            <input type="radio" name="globo">Globo
+            <input type="radio" name="tipo" value="1">Globo
         </label>
         <label class="radio-inline">
-            <input type="radio" name="flor">Flor
+            <input type="radio" name="tipo" value="2">Flor
         </label>
         <label class="radio-inline">
-            <input type="radio" name="chocolate">Chocolate
+            <input type="radio" name="tipo" value="3">Chocolate
         </label>
         <label class="radio-inline">
-            <input type="radio" name="peluche">Peluche
+            <input type="radio" name="tipo" value="4">Peluche
         </label>
     </div>
     <div class="form-group">
       <label for="nombre">Nombre del articulo</label>
-      <input type="text" class="form-control" id="nombreArticulo" name="nombreArticulo">
+      <input type="text" class="form-control" id="nombreArticulo" name="nombre">
     </div>
     <div class="form-group">
       <label for="tipo">Ocasion</label><br>        
         <label class="radio-inline">
-            <input type="radio" name="cumple">Cumpleaños
+            <input type="radio" name="ocasion" value="1">Cumpleaños
         </label>
         <label class="radio-inline">
-            <input type="radio" name="madre">Día de las madres
+            <input type="radio" name="ocasion" value="2">Día de las madres
         </label>
         <label class="radio-inline">
-            <input type="radio" name="boda">Boda
+            <input type="radio" name="ocasion" value="3">Boda
         </label>
         <label class="radio-inline">
-            <input type="radio" name="aniversario">Aniversario
+            <input type="radio" name="ocasion" value="4">Aniversario
         </label>
-    </div>
-    <div id="direccion"class = "form-group row">
-        <div class = 'col-sm-6'>
-            <label for="existencia">Existencia</label>
-            <input type="text" class="form-control" id="existencia">
-        </div>
-        <div class = "col-sm-3">
-            <label for="descuento">Descuento</label>
-            <input type="text" class="form-control" id="descuento">
-        </div>
     </div>
     <div class="form-group">
-        <label class="custom-file">Foto
-            <input type="file" id="file" class="custom-file-input">
-            <span class="custom-file-control"></span>
-        </label>
+      <label>Descripción
+        <br>
+      <textarea name="descripcion" class="form-control" rows="4" cols="50"></textarea>
+    </label>
     </div>
+    <div id="direccion"class = "form-group row">
+        <div class="col-sm-4">
+          <label class="custom-file">Foto
+            <input type="file" name="file" class="custom-file-input">
+            <span class="custom-file-control"></span>
+          </label>
+        </div>
+        <div class = 'col-sm-4'>
+            <label for="existencia">Existencia</label>
+            <input type="text" class="form-control" name="existencia" placeholcer="Indicar valor númerico.">
+        </div>
+        <div class = "col-sm-4">
+            <label for="descuento">Descuento</label>
+            <input type="text" class="form-control" name="descuento" placeholder="25">
+        </div>
+    </div>
+    
     
     <button type="submit" class="btn btn-primary">Registrar</button>
   </form>

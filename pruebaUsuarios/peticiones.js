@@ -1,8 +1,9 @@
 $(document).ready(function(){
 
+
 	$("#btnusuarios").click(function(){
-		$.get("listar.php", function(data, status){
-			console.log(data);
+		$.get("../../pruebaUsuarios/listar.php", function(data, status){
+			//$("#divarticulos").remove();
 			$("#divusuarios").html(data);
 			
 		});

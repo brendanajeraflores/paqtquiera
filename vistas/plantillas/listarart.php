@@ -1,5 +1,5 @@
 <?php  
-include_once 'conexion.php';
+include_once '../../php/conexion.php';
 
 $sql = "SELECT
     A.nombreArticulo,
@@ -19,16 +19,20 @@ $sql = "SELECT
 
 $globos = queryPSQL($sql);
 
-echo $globos;
+
 ?>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="peticiones.js"></script>
   
 
-<link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> 
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<br>
+<a href="../../vistas/articulos/registro.php" class="btn btn-success">Agregar</a>
+<br> 
 <table class="table table-striped table-bordered">
             <thead>
                 <tr>
+                    <th>Acciones</th>
                     <th>Articulo</th>
                     <th>Existencia</th>
                     <th>Descripcion</th>
@@ -43,9 +47,14 @@ echo $globos;
 
                
                 while ($globo = pg_fetch_assoc($globos)) :
-                    var_dump($globo);
+
                     ?>
-                    <tr>             
+                    <tr> 
+                        <td>
+                            <button class="btn btn-primary">Editar</button>
+                            <button class="btn btn-danger">Eliminar</button>
+
+                        </td>             
                         <td><?php echo $globo['nombrearticulo']; ?></td>
                         <td><?php echo $globo['existencia']; ?></td>
                         <td><?php echo $globo['descripcion']; ?></td>

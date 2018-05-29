@@ -15,6 +15,7 @@ $sql = "SELECT
     ON(A.idOcasion = O.idOcasion)
     INNER JOIN Tipo T
     ON(A.idTipo = T.idTipo)
+    WHERE A.idTipo = 1
 ;";
 
 $globos = queryPSQL($sql);

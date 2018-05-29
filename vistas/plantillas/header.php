@@ -34,8 +34,8 @@
     ?>        
     <ul class="nav navbar-nav navbar-right">
             <?php
-              if($_SESSION['perfil'] == 1){ ?>
-              <li><button id="btnusuarios" type="button" class="btn btn-link">Administrar usuarios</button></li>                
+              if($_SESSION['perfil'] != 3 ){ ?>
+              <li><a href="vistas/plantillas/menu.php"><span ></span> Menú para administración</a></li>
             <?php } ?>
         <li><a href="../usuarios/agregar.php"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['nombre']?></a></li>
         <li><a href="php/usuarios/logout.php"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>

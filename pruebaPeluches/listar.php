@@ -15,7 +15,7 @@ $sql = "SELECT
     ON(A.idOcasion = O.idOcasion)
     INNER JOIN Tipo T
     ON(A.idTipo = T.idTipo)
-    WHERE A.idTipo = 1
+    WHERE A.idTipo = 4
 ;";
 
 $globos = queryPSQL($sql);
@@ -49,6 +49,7 @@ echo $globos;
                             <th>Tipo</th>
                             <th>Ocasion</th>
                             <th>Foto</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -66,6 +67,7 @@ echo $globos;
                                 <td><?php echo $globo['nombretipo']; ?></td>
                                 <td><?php echo $globo['nombreocasion']; ?></td>
                                 <td><?php echo $globo['foto']; ?></td>
+                                <td><a href="../../vistas/articulos/registro.php" class="btn btn-success glyphicon glyphicon-shopping-cart">Agregar</a></td>
                             </tr>
                             <?php
                         endwhile;

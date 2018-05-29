@@ -15,12 +15,12 @@ $sql = "SELECT
     ON(A.idOcasion = O.idOcasion)
     INNER JOIN Tipo T
     ON(A.idTipo = T.idTipo)
-    WHERE A.idTipo = 1
+    WHERE A.idTipo = 2
 ;";
 
 $globos = queryPSQL($sql);
 
-echo $globos;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,6 +49,7 @@ echo $globos;
                     <th>Tipo</th>
                     <th>Ocasion</th>
                     <th>Foto</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -56,7 +57,7 @@ echo $globos;
 
                
                 while ($globo = pg_fetch_assoc($globos)) :
-                    var_dump($globo);
+                    
                     ?>
                     <tr>             
                         <td><?php echo $globo['nombrearticulo']; ?></td>
@@ -66,6 +67,8 @@ echo $globos;
                         <td><?php echo $globo['nombretipo']; ?></td>
                         <td><?php echo $globo['nombreocasion']; ?></td>
                         <td><?php echo $globo['foto']; ?></td>
+                        <td><a href="" class="btn btn-success glyphicon glyphicon-shopping-cart"></a></td>
+
                     </tr>
                     <?php
                 endwhile;

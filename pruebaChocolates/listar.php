@@ -48,6 +48,7 @@ $chocolates = queryPSQL($sql);
                     <th>Tipo</th>
                     <th>Ocasion</th>
                     <th>Foto</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -64,6 +65,7 @@ $chocolates = queryPSQL($sql);
                         <td><?php echo $chocolate['nombretipo']; ?></td>
                         <td><?php echo $chocolate['nombreocasion']; ?></td>
                         <td><?php echo $chocolate['foto']; ?></td>
+                        <td><a href="" class="btn btn-success glyphicon glyphicon-shopping-cart"></a></td>
                     </tr>
                     <?php
                 endwhile;

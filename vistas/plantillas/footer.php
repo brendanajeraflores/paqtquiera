@@ -20,11 +20,11 @@
                                         <li><a href="">Trabaja con nosotros</a></li>
                                         <li><a href="">Comentarios y sugerencias</a></li>                
                                     </ul>
-                                    <a href="https://www.facebook.com/RegalosPaQTQuiera/"><img class="iconos" src="../img/fb.png"></a>                
-                                    <a href=""><img class="iconos" src="../img/ig.png"></a>
+                                    <a href="https://www.facebook.com/RegalosPaQTQuiera/"><img class="iconos" src="../../img/fb.png" width="50" height="50"></a>                
+                                    <a href=""><img class="iconos" src="../../img/ig.png" width="50" height="50"></a>
                                 </div>
                                 <div class="col-md-3 col-sm-6 col-xs-12">
-                                    <img src="img/elefante.jpg" alt="" width="100" height="100">
+                                    <img src="/../img/elefante.jpg" alt="" width="100" height="100">
                                 </div>
                                 <div class="col-md-3 col-sm-6 col-xs-12">
                                     <p class="ft">PaqStes seguro</p>

@@ -16,7 +16,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-        <img src="../img/logoPaqtquiera.jpeg" alt="paqtquiera" width="100" height="100">
+        <img src="../../img/logoPaqtquiera.jpeg" alt="paqtquiera" width="100" height="100">
         <!--<a class="navbar-brand" href="#">WebSiteName</a>-->
     </div>
     <ul class="nav navbar-nav">
@@ -39,6 +39,8 @@
               if($_SESSION['perfil'] != 3 ){ ?>
               <li><a href="vistas/plantillas/menu.php"><span ></span> Menú para administración</a></li>
             <?php } ?>
+              <li><a href=""><span ></span> Eliminar cuenta</a></li>
+
         <li><a href="../usuarios/agregar.php"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['nombre']?></a></li>
         <li><a href="php/usuarios/logout.php"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></a></li>
@@ -46,9 +48,9 @@
     </ul>
          <?php } else {?>
     <ul class="nav navbar-nav navbar-right">
-        <li><a href="agregar.php"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
-        <li><a href="vistas/usuarios/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></a></li>
+        <li><a href="agregar.php"><span class="glyphicon glyphicon-user btn-lg"></span> Registrarse</a></li>
+        <li><a href="vistas/usuarios/login.php"><span class="glyphicon glyphicon-log-in btn-lg"></span> Login</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart btn-lg"></a></li>
         <?php }?>
     </ul>
   </div>

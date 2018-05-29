@@ -13,7 +13,8 @@
 </head>
 <body>
 <?php 
-  include_once('../vistas/plantillas/header.php');
+  include "$_SERVER[DOCUMENT_ROOT]/paqtquiera/vistas/plantillas/header.php";
+  //include_once('/paqtquiera/vistas/plantillas/header.php');
 ?>
 
 <?php session_start();
@@ -40,7 +41,8 @@
 <?php }?>
 
 <?php 
-  include_once('../vistas/plantillas/footer.php');
+  include "$_SERVER[DOCUMENT_ROOT]/paqtquiera/vistas/plantillas/footer.php";
+  //include_once('/paqtquiera/vistas/plantillas/header.php');
 ?>
 </body>
 </html>

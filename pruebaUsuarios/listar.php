@@ -15,7 +15,7 @@ ON(U.idPerfil = P.idPerfil)
 
 $usuarios = queryPSQL($sql);
 
-echo $usuarios;
+//echo $usuarios;
 ?>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="peticiones.js"></script>
@@ -30,6 +30,7 @@ echo $usuarios;
                     <th>Correo</th>
                     <th>Telefono</th>
                     <th>Tipo de cuenta</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -37,9 +38,14 @@ echo $usuarios;
 
                
                 while ($usuario = pg_fetch_assoc($usuarios)) :
-                    var_dump($usuario);
+                    //var_dump($usuario);
                     ?>
-                    <tr>             
+                    <tr>
+                        <td>
+                            <button class="btn btn-primary">Editar</button>
+                            <button class="btn btn-danger">Eliminar</button>
+
+                        </td>              
                         <td><?php echo $usuario['nombre_completo']; ?></td>
                         <td><?php echo $usuario['usuario']; ?></td>
                         <td><?php echo $usuario['correo']; ?></td>

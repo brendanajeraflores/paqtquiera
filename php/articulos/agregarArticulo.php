@@ -24,7 +24,7 @@
 
 
 
-$query = "INSERT INTO articulo VALUES(4,'".$nombre."','".$existencia."','".$descripcion."','".$descuento."','".$tipo."','".$ocasion."','ruta/foto/');";
+$query = "INSERT INTO articulo VALUES(10,'".$nombre."','".$existencia."','".$descripcion."','".$descuento."','".$tipo."','".$ocasion."','ruta/foto/');";
 	
 	
 	pg_fetch_all(queryPSQL($query));

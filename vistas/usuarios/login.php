@@ -10,7 +10,8 @@
 </head>
 <body>
 <?php 
-  include_once('/paqtquiera/vistas/plantillas/header.php');
+  include "$_SERVER[DOCUMENT_ROOT]/paqtquiera/vistas/plantillas/header.php";
+  //include_once('/paqtquiera/vistas/plantillas/header.php');
 ?>
 <div class="container">
   <h2>Iniciar sesión</h2>
@@ -33,7 +34,8 @@
 </div>
 
 <?php 
-  include_once('/paqtquiera/vistas/plantillas/footer.php');
+  include "$_SERVER[DOCUMENT_ROOT]/paqtquiera/vistas/plantillas/footer.php";
+  //include_once('/paqtquiera/vistas/plantillas/header.php');
 ?>
 </body>
 </html>

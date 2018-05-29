@@ -34,7 +34,8 @@ $globos = queryPSQL($sql);
 </head>
 <body>
 <?php 
-  include_once('/paqtquiera/vistas/plantillas/header.php');
+  include "$_SERVER[DOCUMENT_ROOT]/paqtquiera/vistas/plantillas/header.php";
+  //include_once('/paqtquiera/vistas/plantillas/header.php');
 ?>
 <div class="container">
     <h2>Flores</h2>
@@ -66,7 +67,7 @@ $globos = queryPSQL($sql);
                         <td><?php echo $globo['descuento']; ?></td>
                         <td><?php echo $globo['nombretipo']; ?></td>
                         <td><?php echo $globo['nombreocasion']; ?></td>
-                        <td><?php echo $globo['foto']; ?></td>
+                        <td><img src="/paqtquiera/img/articulos/flores/arreglo.jpg"></td>
                         <td><a href="" class="btn btn-success glyphicon glyphicon-shopping-cart"></a></td>
 
                     </tr>
@@ -77,7 +78,8 @@ $globos = queryPSQL($sql);
         </table>
 </div>
 <?php 
-  include_once('/paqtquiera/vistas/plantillas/footer.php');
+  include "$_SERVER[DOCUMENT_ROOT]/paqtquiera/vistas/plantillas/footer.php";
+  //include_once('/paqtquiera/vistas/plantillas/header.php');
 ?>
 </body>
 </html>

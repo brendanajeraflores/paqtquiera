@@ -5,7 +5,7 @@
 
   $resultado = [];
   $resultado = pg_fetch_all(queryPSQL($sql));
-  var_dump($resultado);
+  //var_dump($resultado);
   $max = count($resultado);
 
 ?>
@@ -22,7 +22,8 @@
 </head>
 <body>
 <?php 
-  include_once('../vistas/plantillas/header.php');
+  include "$_SERVER[DOCUMENT_ROOT]/paqtquiera/vistas/plantillas/header.php";
+  //include_once('/paqtquiera/vistas/plantillas/header.php');
 ?>
 <div class="container">
   <h2>Registrar usuario</h2>
@@ -113,9 +114,10 @@
     <button type="submit" class="btn btn-primary">Registrar</button>
   </form>
 </div>
-
 <?php 
-  include_once('../vistas/plantillas/footer.php');
+  include "$_SERVER[DOCUMENT_ROOT]/paqtquiera/vistas/plantillas/footer.php";
+  //include_once('/paqtquiera/vistas/plantillas/header.php');
 ?>
+
 </body>
 </html>

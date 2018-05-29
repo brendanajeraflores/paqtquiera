@@ -24,7 +24,10 @@ echo $globos;
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="peticiones.js"></script>
   
-
+<?php 
+  include "$_SERVER[DOCUMENT_ROOT]/paqtquiera/vistas/plantillas/header.php";
+  //include_once('/paqtquiera/vistas/plantillas/header.php');
+?>
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> 
 <table class="table table-striped table-bordered">
             <thead>
@@ -59,3 +62,7 @@ echo $globos;
                  ?>
             </tbody>
         </table>
+        <?php 
+  include "$_SERVER[DOCUMENT_ROOT]/paqtquiera/vistas/plantillas/footer.php";
+  //include_once('/paqtquiera/vistas/plantillas/header.php');
+?>

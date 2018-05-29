@@ -41,14 +41,14 @@
 	}
 
 
-	$sql = "INSERT INTO direccion VALUES(4,'".$calle."','".$numext."','".$numint."',2)";
+	$sql = "INSERT INTO direccion VALUES(10,'".$calle."','".$numext."','".$numint."',2)";
 
 	pg_fetch_all(queryPSQL($sql));
 
 	if(!empty($radio)){
-		$query = "INSERT INTO usuario VALUES(6,'".$nombre."','".$primerApellido."','".$segundoApellido."','".$usuario."','".$contrasenia."','".$correo."','".$telefono."',4,".$radio.");";
+		$query = "INSERT INTO usuario VALUES(15,'".$nombre."','".$primerApellido."','".$segundoApellido."','".$usuario."','".$contrasenia."','".$correo."','".$telefono."',10,".$radio.");";
 	} else {
-		$query = "INSERT INTO usuario VALUES(6,'".$nombre."','".$primerApellido."','".$segundoApellido."','".$usuario."','".$contrasenia."','".$correo."','".$telefono."',4,3);";
+		$query = "INSERT INTO usuario VALUES(15,'".$nombre."','".$primerApellido."','".$segundoApellido."','".$usuario."','".$contrasenia."','".$correo."','".$telefono."',10,3);";
 	}
 	
 	pg_fetch_all(queryPSQL($query));

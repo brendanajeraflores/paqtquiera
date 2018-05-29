@@ -10,7 +10,8 @@
 </head>
 <body>
 <?php 
-  include_once('../vistas/plantillas/header.php');
+  include "$_SERVER[DOCUMENT_ROOT]/paqtquiera/vistas/plantillas/header.php";
+  //include_once('/paqtquiera/vistas/plantillas/header.php');
 ?>
 <div class="container">
   <h2>Registrar articulo</h2>
@@ -78,7 +79,8 @@
 </div>
 
 <?php 
-  include_once('../vistas/plantillas/footer.php');
+  include "$_SERVER[DOCUMENT_ROOT]/paqtquiera/vistas/plantillas/footer.php";
+  //include_once('/paqtquiera/vistas/plantillas/header.php');
 ?>
 </body>
 </html>

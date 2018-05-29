@@ -33,7 +33,8 @@ $chocolates = queryPSQL($sql);
 </head>
 <body>
 <?php 
-  include_once('/paqtquiera/vistas/plantillas/header.php');
+  include "$_SERVER[DOCUMENT_ROOT]/paqtquiera/vistas/plantillas/header.php";
+  //include_once('/paqtquiera/vistas/plantillas/header.php');
 ?>
 <div class="container">
     <h2>Chocolates</h2>
@@ -64,7 +65,7 @@ $chocolates = queryPSQL($sql);
                         <td><?php echo $chocolate['descuento']; ?></td>
                         <td><?php echo $chocolate['nombretipo']; ?></td>
                         <td><?php echo $chocolate['nombreocasion']; ?></td>
-                        <td><?php echo $chocolate['foto']; ?></td>
+                        <td><img src="../img/articulos/chocolates/chocolates1.jpg"></td>
                         <td><a href="" class="btn btn-success glyphicon glyphicon-shopping-cart"></a></td>
                     </tr>
                     <?php
@@ -74,7 +75,8 @@ $chocolates = queryPSQL($sql);
         </table>
 </div>
 <?php 
-  include_once('/paqtquiera/vistas/plantillas/footer.php');
+  include "$_SERVER[DOCUMENT_ROOT]/paqtquiera/vistas/plantillas/footer.php";
+  //include_once('/paqtquiera/vistas/plantillas/header.php');
 ?>
 </body>
 </html>

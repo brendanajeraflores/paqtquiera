@@ -16,11 +16,11 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-        <img src="/paqtquiera/img/logoPaqtquiera.jpeg" alt="paqtquiera" width="100" height="100">
+        <a href="/paqtquiera/index.php"><img src="/paqtquiera/img/logoPaqtquiera.jpeg" alt="paqtquiera" width="100" height="100"></a>
         <!--<a class="navbar-brand" href="#">WebSiteName</a>-->
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="../index.php">Home</a></li>
+      <li class="active"><a href="/paqtquiera/index.php">Home</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Menú <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="/paqtquiera/pruebaGlobos/listar.php">Globos</a></li>
